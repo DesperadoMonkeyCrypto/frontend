@@ -1,0 +1,21 @@
+/* src/styles/ProductGrid.css */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+  padding: 40px;
+}
+
+.products-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.no-products-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 40px;
+}
