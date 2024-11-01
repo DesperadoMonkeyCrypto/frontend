@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@metamask/detect-provider": "^2.0.0",
     "@mui/material": "^6.1.5",
     "axios": "^0.27.2",
     "react": "^18.2.0",
@@ -12,14 +13,16 @@
     "react-lazy-load-image-component": "^1.6.2",
     "react-router-dom": "^6.27.0",
     "react-scripts": "^5.0.1",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "web3": "^4.14.0"
   },
   "proxy": "https://api.printful.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "purgecss --css build/static/css/*.css --content build/static/js/*.js --output build/static/css"
   },
   "browserslist": {
     "production": [
@@ -32,5 +35,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "purgecss": "^6.0.0"
   }
 }
+
