@@ -118,12 +118,3 @@ footer {
     font-size: 0.9em;
 }
 
-/* Animation */
-@keyframes pulse {
-    0%, 100% {
-        color: #00f2ff;
-    }
-    50% {
-        color: #c22cfd;
-    }
-}

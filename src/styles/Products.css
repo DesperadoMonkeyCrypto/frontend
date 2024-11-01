@@ -1,19 +1,59 @@
-/* Main container for products page */
+/* Center the main products container and ensure responsive grid */
 .products-container {
-    text-align: center;
-    padding: 40px 0;
-}
-
-/* Center the "Our Products" title */
-.products-container h2 {
-    font-size: 2em;
-    margin-bottom: 24px;
-    color: #333;
-}
-
-/* Styling for the product grid */
-.product-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Product card styling for modern look */
+.product-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #00c8c8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #00eaff;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
 }

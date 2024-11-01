@@ -1,10 +1,9 @@
-// src/components/Footer.js
 import React from 'react';
 import '../styles/Footer.css';
 
 const Footer = () => (
-  <footer>
-    <p>© 2023 NFT Merch Store. All rights reserved.</p>
+  <footer className="footer">
+    <p>© {new Date().getFullYear()} PulseChain Merch Shop. All rights reserved.</p>
   </footer>
 );
 

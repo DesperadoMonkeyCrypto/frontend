@@ -1,20 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import bannerImage from '../assets/images/hero-image.png'; // Adjust path as needed
 import '../styles/Header.css';
+import WalletConnect from './WalletConnect'; // Ensure this path is correct
 
-function Header() {
-    return (
-        <header>
-            <h1>PULSECHAIN MERCH SHOP</h1>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/products">Products</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-            </nav>
-        </header>
-    );
-}
+const Header = () => (
+  <header className="header">
+    <div className="header-logo">PulseChain Merch Shop</div>
+    <nav className="header-nav">
+      <Link to="/">Home</Link>
+      <Link to="/products">Products</Link>
+      <Link to="/about">About</Link>
+      <Link to="/contact">Contact</Link>
+      <WalletConnect /> {/* Add the WalletConnect component here */}
+    </nav>
+  </header>
+);
 
 export default Header;

@@ -37,7 +37,7 @@ const App = () => {
         <Router>
             <Header />
             <Banner /> {/* Add the banner below the header */}
-            <WalletConnect onWalletConnect={handleWalletConnect} />
+
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />

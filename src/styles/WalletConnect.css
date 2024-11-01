@@ -1,0 +1,14 @@
+.wallet-connect-button {
+    padding: 0.5rem 1rem;
+    background-color: #00f2ff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .wallet-connect-button:hover {
+    background-color: #00d1e5;
+  }
+  
