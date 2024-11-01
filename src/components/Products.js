@@ -1,12 +1,11 @@
-// frontend/src/components/Products.js
-
+// src/components/Products.js
 import React from 'react';
-import ProductList from './ProductList'; // Ensure this path is correct
+import ProductList from './ProductList';
 
-const Products = ({ products }) => (
-    <div className="products-container">
+const Products = () => (
+    <div>
         <h2>Our Products</h2>
-        <ProductList products={products} />
+        <ProductList />
     </div>
 );
 
