@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Products from './components/Products';
 import WalletConnect from './components/WalletConnect';
+import './styles/styles.css';
+
 
 const App = () => {
     const [walletAddress, setWalletAddress] = useState(null);
