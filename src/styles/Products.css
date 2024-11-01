@@ -1,11 +1,16 @@
-/* src/components/Products.css */
-.products-container {
-    padding: 20px;
+.products-page {
+    padding: 40px;
     text-align: center;
-  }
-  
-  .products-container h2 {
-    font-size: 2em;
+    background-color: #f9f9f9;
+}
+
+.products-page h1 {
+    font-size: 32px;
     margin-bottom: 20px;
-  }
-  
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
