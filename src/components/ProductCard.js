@@ -36,6 +36,7 @@ const ProductCard = ({ product }) => {
                 <p>Product ID: {product.id}</p>
             </Modal>
         </div>
+        
     );
 };
 
