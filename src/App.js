@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Products from './components/Products';
@@ -35,6 +36,7 @@ const App = () => {
     return (
         <Router>
             <Header />
+            <Banner /> {/* Add the banner below the header */}
             <WalletConnect onWalletConnect={handleWalletConnect} />
             <main>
                 <Routes>

@@ -1,60 +1,129 @@
-/* App.css */
-
+/* Base styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+    background-color: #111; /* Dark background for a crypto feel */
+    color: #e0e0e0; /* Light text for readability */
     margin: 0;
-    color: #333;
+    padding: 0;
 }
 
-h1 {
-    color: #333;
+/* Header */
+header {
+    background-color: #000; /* Pure black for emphasis */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00f2ff; /* Neon cyan inspired by PulseChain */
+    letter-spacing: 2px;
+    animation: pulse 2s infinite;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #e0e0e0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header nav a:hover {
+    color: #00f2ff;
+}
+
+/* Banner Image */
+.banner-image {
+    width: 100%;
+    height: 200px; /* Set the banner height */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #00f2ff;
+}
+
+/* Products Section */
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .product-card {
-    border: 1px solid #ddd;
+    background-color: #222;
+    border: 1px solid #333;
     border-radius: 8px;
-    width: 200px;
-    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 242, 255, 0.2); /* Soft neon glow */
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
     text-align: center;
-    transition: box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 242, 255, 0.4);
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 20px;
+.product-card img {
+    max-width: 100%;
     border-radius: 8px;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
+.product-card h2 {
+    font-size: 1.5em;
+    color: #00f2ff;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #b0b0b0;
+}
+
+/* Buttons */
+button, .connect-wallet-button {
+    background-color: #00f2ff;
+    color: #000;
     border: none;
-    font-size: 1.2em;
+    padding: 12px 20px;
+    font-size: 5em;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, .connect-wallet-button:hover {
+    background-color: #00d1e5;
+    transform: scale(1.05);
+}
+
+button:active, .connect-wallet-button:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Animation */
+@keyframes pulse {
+    0%, 100% {
+        color: #00f2ff;
+    }
+    50% {
+        color: #c22cfd;
+    }
 }

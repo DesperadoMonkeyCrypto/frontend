@@ -1,20 +1,20 @@
-// src/components/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bannerImage from '../assets/images/hero-image.png'; // Adjust path as needed
 import '../styles/Header.css';
 
-const Header = () => (
-  <header>
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/products">Products</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        {/* Add more links as needed */}
-      </ul>
-    </nav>
-  </header>
-);
+function Header() {
+    return (
+        <header>
+            <h1>PULSECHAIN MERCH SHOP</h1>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/products">Products</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+            </nav>
+        </header>
+    );
+}
 
 export default Header;
