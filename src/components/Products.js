@@ -1,7 +1,7 @@
 // frontend/src/components/Products.js
 
 import React from 'react';
-import ProductList from './components/ProductList';
+import ProductList from './ProductList'; // Ensure this path is correct
 
 const Products = ({ products }) => (
     <div className="products-container">

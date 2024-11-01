@@ -16,13 +16,11 @@
     "styled-components": "^6.1.13",
     "web3": "^4.14.0"
   },
-  "proxy": "https://api.printful.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "purgecss --css build/static/css/*.css --content build/static/js/*.js --output build/static/css"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -35,9 +33,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "purgecss": "^6.0.0"
   }
 }
-
