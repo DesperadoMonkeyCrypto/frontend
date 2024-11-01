@@ -1,16 +1,19 @@
-.products-page {
-    padding: 40px;
+/* Main container for products page */
+.products-container {
     text-align: center;
-    background-color: #f9f9f9;
+    padding: 40px 0;
 }
 
-.products-page h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+/* Center the "Our Products" title */
+.products-container h2 {
+    font-size: 2em;
+    margin-bottom: 24px;
+    color: #333;
 }
 
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+/* Styling for the product grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
