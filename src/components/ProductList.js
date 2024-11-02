@@ -1,42 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/ProductList.css';
 
-const ProductList = () => {
-    const [products, setProducts] = useState([]);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const response = await fetch('/api/printful/products');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch products');
-                }
-                const data = await response.json();
-                setProducts(data.result); // Assuming `result` holds the product data
-            } catch (err) {
-                setError(err.message);
-            }
-        };
-
-        fetchProducts();
-    }, []);
-
+const ProductList = ({ products }) => {
     return (
-        <div>
-            <h2>Our Products</h2>
-            {error ? (
-                <p style={{ color: 'red' }}>Error: {error}</p>
-            ) : (
-                <ul>
-                    {products.map((product) => (
-                        <li key={product.id}>
-                            <h3>{product.name}</h3>
-                            <img src={product.thumbnail_url} alt={product.name} width="100" />
-                            <p>Variants: {product.variants}</p>
-                        </li>
-                    ))}
-                </ul>
-            )}
+        <div className="product-grid">
+            {products.map(product => (
+                <Link to={`/product/${product.id}`} key={product.id} className="product-card">
+                    <div>
+                        <img src={product.thumbnail_url} alt={product.name} className="product-image" />
+                        <h3 className="product-title">{product.name}</h3>
+                    </div>
+                </Link>
+            ))}
         </div>
     );
 };

@@ -1,0 +1,23 @@
+/* hero-section.css */
+.hero {
+  background-image: url('./assets/images/hero-image.jpg'); /* Replace with actual path */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}

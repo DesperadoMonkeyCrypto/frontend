@@ -7,18 +7,9 @@ import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Products from './components/Products';
-import ProductDetail from './components/ProductDetail'; // Ensure this is imported
 import WalletConnect from './components/WalletConnect';
-import './styles/App.css';
-import './styles/ProductList.css';
-import './styles/ProductDetail.css';
-import './styles/Home.css';
-import './styles/Footer.css';
-import './styles/Products.css';
-import './styles/ProductGrid.css';
-import './styles/WalletConnect.css';
-import './styles/ProductCard.css';
-import './styles/index.css';
+import './styles/styles.css';
+
 
 const App = () => {
     const [walletAddress, setWalletAddress] = useState(null);
@@ -45,12 +36,12 @@ const App = () => {
     return (
         <Router>
             <Header />
-            <Banner />
+            <Banner /> {/* Add the banner below the header */}
+
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/products" element={<Products products={products} />} />
-                    <Route path="/product/:id" element={<ProductDetail />} /> {/* Route for product details */}
                 </Routes>
             </main>
             <Footer />

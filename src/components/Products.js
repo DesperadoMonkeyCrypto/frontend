@@ -1,5 +1,6 @@
+// frontend/src/components/Products.js
 import React, { useEffect, useState } from 'react';
-import ProductCard from '../components/ProductCard';
+import { Link } from 'react-router-dom';
 import '../styles/Products.css';
 
 const Products = () => {
@@ -8,9 +9,9 @@ const Products = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('/api/printful/products');
+                const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/printful/products`);
                 const data = await response.json();
-                setProducts(data.result); // Adjust based on your API response structure
+                setProducts(data);
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
@@ -20,12 +21,15 @@ const Products = () => {
     }, []);
 
     return (
-        <div className="products-container">
-            <div className="products-grid">
-                {products.map((product) => (
-                    <ProductCard key={product.id} product={product} />
-                ))}
-            </div>
+        <div className="product-grid">
+            {products.map((product) => (
+                <div key={product.id} className="product-card">
+                    <Link to={`/product/${product.id}`}>
+                        <img src={product.thumbnail_url} alt={product.name} />
+                        <h2>{product.name}</h2>
+                    </Link>
+                </div>
+            ))}
         </div>
     );
 };

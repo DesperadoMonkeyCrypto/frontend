@@ -1,0 +1,37 @@
+.variant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.variant-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: #1c1c1c;
+}
+
+.variant-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.variant-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.variant-card:hover {
+    transform: scale(1.05);
+}
+
+.variant-card img {
+    border: 2px solid transparent;
+}
+
+.variant-card.active img {
+    border-color: #00aced; /* Customize color */
+}

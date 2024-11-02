@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+}
+
+.header-logo {
+  font-size: 2rem;
+  color: #00f2ff;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: #00f2ff;
+  }
+  50% {
+    color: #e66cef;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav a {
+  margin: 0 1rem;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.header-nav a:hover {
+  color: #00f2ff;
+}
+
+.wallet-connect-button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #00f2ff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wallet-connect-button:hover {
+  background-color: #00d1e5;
+}
